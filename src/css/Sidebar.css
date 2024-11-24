@@ -1,0 +1,166 @@
+/* sidebar.css */
+
+
+
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden by default */
+  width: auto;
+  height: 100%;
+  background-color: #2c3e50;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+  padding: 20px 15px;
+}
+
+.sidebar.open {
+  left: 0; /* Slide-in effect when open */
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #1abc9c;
+}
+
+.sidebar p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: grey;
+}
+.sidebar nav ul li {
+  padding: 10px 0;
+  cursor: pointer;
+  color: #555;
+}
+/* Navigation styles */
+.nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+.sidebar-btn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.sidebar-btn.active,
+.sidebar-btn:hover {
+  background-color: #1abc9c;
+  
+}
+
+.sidebar-btn .icon {
+  margin-right: 10px;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.sidebar {
+  width: auto;
+  background-color: #ffffff;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
+
+.sidebar.open {
+  left: 0; /* Sidebar slides in when open */
+}
+
+.sidebar h2 {
+  font-size: 34px;
+  color: #333;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-btn,.sidebar-btn1 {
+  padding:12px;
+  margin: 8px 0;
+  font-size: 18px;
+  background: none;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+  border: none;
+  transition: color 0.3s;
+  text-decoration:none;
+}
+
+.sidebar-btn:hover {
+  border-width: 4px;
+  background-color: lightgreen;
+}
+.sidebar-btn:hover::before {
+  width: 400px; /* Set the width of the border to 400px on hover */
+}
+
+.sidebar-btn1.active {
+  color: darkgreen;
+  
+}
+.sidebar-btn .icon {
+  margin-right: 10px;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: black;
+  font-size: 30px;
+  padding-left: 30px;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    left: -250px; /* Sidebar hidden off-screen */
+  }
+
+  .sidebar.open {
+    left: 0; /* Sidebar slides in */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger button on mobile */
+  }
+}
+
+/* Desktop View */
+@media screen and (min-width: 768px) {
+  .sidebar {
+    left: 0; /* Sidebar visible by default */
+  }
+
+  .hamburger {
+    display: none; /* Hide hamburger on desktop */
+  }
+}
+

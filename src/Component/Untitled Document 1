@@ -1,0 +1,30 @@
+// Fetch customer data
+ /* useEffect(() => {
+    const fetchCustomerDetails = async () => {
+      try {
+        // Assuming these are the API endpoints
+        const customerRes = await axios.get("https://api.example.com/customer");
+        const ordersRes = await axios.get("https://api.example.com/orders");
+
+        setCustomerInfo({
+          name: customerRes.data.name,
+          location: customerRes.data.location,
+          orderCount: customerRes.data.orderCount,
+          customerSince: customerRes.data.customerSince,
+          rating: customerRes.data.rating,
+        });
+
+        setOverviewData({
+          address: customerRes.data.address,
+          email: customerRes.data.email,
+          phone: customerRes.data.phone,
+        });
+
+        setOrders(ordersRes.data.orders);
+      } catch (error) {
+        console.error("Error fetching customer data:", error);
+      }
+    };
+
+    fetchCustomerDetails();
+  }, []);*/
